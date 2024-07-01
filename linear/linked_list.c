@@ -25,6 +25,28 @@ int free_list(node *head) {
     return tracker;
 }
 
+int MAX(node *head){
+    int max = head->data;
+    while(head != NULL){
+        if(head->data > max){
+            max = head->data;
+        }
+        head = head->next;
+    }
+    return max;
+}
+
+int MIN(node *head){
+    int min = head->data;
+    while(head != NULL){
+        if(head->data < min){
+            min = head->data;
+        }
+        head = head->next;
+    }
+    return min;
+}
+
 int main() {
     return 0;
 }
